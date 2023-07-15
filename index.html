@@ -71,9 +71,32 @@
       color: #b94648;
     }
   </style>
+<script>
+document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+	var e = event || window.event || arguments.callee.caller.arguments[0];
+	if (e && e.keyCode == 123) {
+		mAlert();
+		e.returnValue = false;
+		return (false);
+	}
+}
+function mAlert() {
+	alert("禁止对控制台进行操作！");
+}
+
+// 防止鼠标右键浏览器‘检查’操作
+setInterval(function () {
+	debugger;
+}, 100)
+
+// 禁止右键
+document.oncontextmenu = function () { return false; };
+
+</script>
 </head>
 
-<body oncontextmenu="return false" onkeydown="return (event.keyCode != 123)">
+<body>
+
   <div id="login_box">
     <h2>登录</h2>
 
