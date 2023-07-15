@@ -31,7 +31,21 @@
   
 
 </head>
-
+    <script>
+        async function verifyPassword() {
+            const password = window.prompt("请输入密码：");
+            const hash = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(password));
+            const hashArray = Array.from(new Uint8Array(hash));
+            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            if (hashHex === "0a1d41510d82fa99bc66a17a24a7a032d0d128231307d2b34c57abc3feec94fd") {
+                alert("验证成功！");
+            } else {
+                alert("验证失败！");
+                verifyPassword();
+            }
+        }
+        verifyPassword();
+    </script>
 <body id="top" class="home">
 
 <div class="container-fluid">
