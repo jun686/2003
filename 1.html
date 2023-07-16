@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>密码验证</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <form id="form">
+        <label for="password">请输入密码：</label>
+        <input type="password" id="password" name="password">
+        <button type="submit">提交</button>
+    </form>
+
+    <script>
+        $(function () {
+            $('#form').submit(function (e) {
+                e.preventDefault();
+                const password = $('#password').val();
+                const sha256 = CryptoJS.SHA256(password).toString();
+                $.getJSON('json.json', function (data) {
+                    if (sha256 === data.sha256) {
+                        window.location.href = data.url;
+                    } else {
+                        alert('密码错误');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
