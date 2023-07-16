@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico"> 
+  <title>毕业啦！青春之舟，乘风破浪！</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <style>
+    body {
+      background: url('https://pic.imgdb.cn/item/64b262be1ddac507cc7fc5f5.png') no-repeat;
+      background-size: 100% 130%;
+    }
+ 
+    #login_box {
+      width: 50%;
+      height: 400px;
+      background-color: #00000060;
+      margin: auto;
+      margin-top: 10%;
+      text-align: center;
+      border-radius: 10px;
+      padding: 50px 50px;
+    }
+ 
+    h2 {
+      color: #ffffff90;
+      margin-top: 5%;
+    }
+
+    #input-box {
+      margin-top: 5%;
+    }
+
+    span {
+      color: #fff;
+    }
+
+    input {
+      border: 0;
+      width: 60%;
+      font-size: 15px;
+      color: #fff;
+      background: transparent;
+      border-bottom: 2px solid #fff;
+      padding: 5px 10px;
+      outline: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 50px;
+      width: 60%;
+      height: 30px;
+      border-radius: 10px;
+      border: 0;
+      color: #fff;
+      text-align: center;
+      line-height: 30px;
+      font-size: 15px;
+      background-image: linear-gradient(to right, #30cfd0, #330867);
+    }
+
+    #sign_up {
+      margin-top: 45%;
+      margin-left: 60%;
+    }
+
+    a {
+      color: #b94648;
+    }
+  </style>
+<script>
+document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+	var e = event || window.event || arguments.callee.caller.arguments[0];
+	if (e && e.keyCode == 123) {
+		mAlert();
+		e.returnValue = false;
+		return (false);
+	}
+}
+function mAlert() {
+	alert("禁止对控制台进行操作！");
+}
+
+// 防止鼠标右键浏览器‘检查’操作
+setInterval(function () {
+	debugger;
+}, 100)
+
+// 禁止右键
+document.oncontextmenu = function () { return false; };
+
+</script>
+</head>
+
+<body>
+
+  <div id="login_box">
+    <h2>登录</h2>
+
+	<form id="login-form" onsubmit="return validateForm()">
+		<input type="password" id="password" name="password" placeholder="请输入密码">
+                                <button type="submit">提交</button>
+	</form>
+  </div>
+
+
+
+<script>
+        $(function () {
+            $('#form').submit(function (e) {
+                e.preventDefault();
+                const password = $('#password').val();
+                const sha256 = CryptoJS.SHA256(password).toString();
+                $.getJSON('json.json', function (data) {
+                    if (sha256 === data.sha256) {
+                        window.location.href = data.url;
+                    } else {
+                        alert('密码错误');
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
