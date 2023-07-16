@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="favicon.ico"> 
@@ -116,7 +115,7 @@ document.oncontextmenu = function () { return false; };
                 e.preventDefault();
                 const password = $('#password').val();
                 const sha256 = CryptoJS.SHA256(password).toString();
-                $.getJSON('json.json', function (data) {
+                $.getJSON('https://github.com/jun686/2003/blob/main/json.json', function (data) {
                     if (sha256 === data.sha256) {
                         window.location.href = data.url;
                     } else {
