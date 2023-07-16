@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
+    <script src="https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" href="favicon.ico"> 
   <title>毕业啦！青春之舟，乘风破浪！</title>
-    <script src="https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <style>
     body {
       background: url('https://pic.imgdb.cn/item/64b262be1ddac507cc7fc5f5.png') no-repeat;
@@ -101,21 +101,19 @@ document.oncontextmenu = function () { return false; };
   <div id="login_box">
     <h2>登录</h2>
 
-	<form id="login-form" onsubmit="return validateForm()">
+	<form id="form" onsubmit="return validateForm()">
 		<input type="password" id="password" name="password" placeholder="请输入密码">
                                 <button type="submit">提交</button>
 	</form>
   </div>
 
-
-
-<script>
+    <script>
         $(function () {
             $('#form').submit(function (e) {
                 e.preventDefault();
                 const password = $('#password').val();
                 const sha256 = CryptoJS.SHA256(password).toString();
-                $.getJSON('https://github.com/jun686/2003/blob/main/json.json', function (data) {
+                $.getJSON('json.json', function (data) {
                     if (sha256 === data.sha256) {
                         window.location.href = data.url;
                     } else {
