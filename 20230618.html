@@ -183,23 +183,79 @@
 				<p class="margin-b-5">感谢所有为我们付出的老师、家长和同学！</p>
 				<p>回首三年，感谢有你，陪伴我们走过青春的风风雨雨~</p>
 			   
-				<div class="tm-img-grid">
-<center>
-<div class="tu"><img src="https://pic.imgdb.cn/item/64b228b01ddac507cc9eba2f.jpg" width="300" height="200" /><img src="https://pic.imgdb.cn/item/64b228b11ddac507cc9ebb3c.jpg" width="300" height="200" />
-<img src="https://pic.imgdb.cn/item/64b228b11ddac507cc9ebd18.jpg" width="300" height="200" /></div>
-
-<div class="tu"><img src="https://pic.imgdb.cn/item/64b228b91ddac507cc9ed441.jpg" width="300" height="200" /><img src="https://pic.imgdb.cn/item/64b228bc1ddac507cc9ede86.jpg" width="300" height="200" />
-<img src="https://pic.imgdb.cn/item/64b229361ddac507cca08f17.jpg" width="300" height="200" /></div>
-
-<div class="tu"><img src="https://pic.imgdb.cn/item/64b229361ddac507cca08fed.jpg" width="300" height="200" /><img src="https://pic.imgdb.cn/item/64b229361ddac507cca090df.jpg" width="300" height="200" />
-<img src="https://pic.imgdb.cn/item/64b229371ddac507cca091e2.jpg" width="300" height="200" /></div>
-
-<div class="tu"><img src="https://pic.imgdb.cn/item/64b229351ddac507cca08e1b.jpg" width="300" height="200" /><img src="https://pic.imgdb.cn/item/64b229811ddac507cca19d5b.jpg" width="300" height="200" />
-<img src="https://pic.imgdb.cn/item/64b229811ddac507cca19dcb.jpg" width="300" height="200" /></div>
-<center/>
+				    <style>
+        .album {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 20px;
+        }
+        
+        .album img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+        
+        @media (min-width: 480px) {
+            /* 在至少480px宽度的屏幕上，每行显示2张图片 */
+            .album img {
+                width: calc(50% - 10px);
+            }
+        }
+        
+        @media (min-width: 768px) {
+            /* 在至少768px宽度的屏幕上，每行显示3张图片 */
+            .album img {
+                width: calc(33.33% - 10px);
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            /* 在至少1024px宽度的屏幕上，每行显示4张图片 */
+            .album img {
+                width: calc(25% - 10px);
+            }
+        }
+    </style>
+    <div class="album">
+        <img src="https://pic.imgdb.cn/item/64b228b01ddac507cc9eba2f.jpg">
+        <img src="https://pic.imgdb.cn/item/64b228b11ddac507cc9ebb3c.jpg">
+        <img src="https://pic.imgdb.cn/item/64b228b11ddac507cc9ebd18.jpg">
+        <img src="https://pic.imgdb.cn/item/64b228b91ddac507cc9ed441.jpg">
+        <img src="https://pic.imgdb.cn/item/64b228bc1ddac507cc9ede86.jpg">
+        <img src="https://pic.imgdb.cn/item/64b229361ddac507cca08f17.jpg">
+        <img src="https://pic.imgdb.cn/item/64b229361ddac507cca08fed.jpg">
+        <img src="https://pic.imgdb.cn/item/64b229361ddac507cca090df.jpg">
+        <img src="https://pic.imgdb.cn/item/64b229371ddac507cca091e2.jpg">
+        <img src="https://pic.imgdb.cn/item/64b229351ddac507cca08e1b.jpg">
+        <img src="https://pic.imgdb.cn/item/64b229811ddac507cca19d5b.jpg">
+        <img src="https://pic.imgdb.cn/item/64b229811ddac507cca19dcb.jpg">
+    </div>
 		</section>
 
-	</div> <!-- row -->
+	</div>
+    <style>
+
+        
+
+        
+        #image-container img {
+            max-width: 100%;
+            max-height: 100%; /* 图片的最大高度为容器高度 */
+            width: auto;
+            height: auto;
+        }
+    </style>
+    <div id="image-container">
+        <img src="https://pic.imgdb.cn/item/64da118c1ddac507ccfbf495.jpg" alt="图片">
+    </div>
+<!-- row -->
 	<div class="row">
 		<div class="tm-section" id="tm-section-3">
 			
@@ -294,7 +350,7 @@
 <h2>3班老师</h2>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64b926631ddac507cc43529e.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>谢建丽</b></h4> 
         <p>语文</p> 
@@ -302,7 +358,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c8c11ddac507cce7ded9.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>刘劲</b></h4> 
         <b>语文</b> 
@@ -312,7 +368,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c9a81ddac507cce9c62e.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>李宏</b></h4> 
         <p>数学</p>
@@ -322,7 +378,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c9fe1ddac507ccea9ed0.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>郭师砺</b></h4> 
         <p>英语</p> 
@@ -330,7 +386,7 @@
 </div>
 
 <div class="card">
-    <img src="img_avatar.png" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>刘洁</b></h4> 
         <p>英语</p> 
@@ -338,7 +394,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3ca631ddac507cceb70c1.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>Morgan(何康)</b></h4> 
         <p>英语</p>
@@ -348,7 +404,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64d45f381ddac507ccf7b892.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>贺晴</b></h4> 
         <p>政治</p> 
@@ -356,7 +412,6 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c7841ddac507cce464ea.jpg" alt="Avatar" style="width:100%">
     <div class="container">
         <h4><b>周海燕</b></h4> 
         <p>政治</p>
@@ -366,7 +421,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64d45f381ddac507ccf7b840.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>易娟</b></h4> 
         <p>历史</p>
@@ -376,7 +431,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64b926631ddac507cc43526f.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>张丽燕</b></h4> 
         <p>物理</p>
@@ -386,7 +441,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64d458041ddac507cce8c699.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>刘辉</b></h4> 
         <p>化学</p>
@@ -395,7 +450,7 @@
     </div>
 </div>
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64b926631ddac507cc4352d6.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>张丽俊</b></h4> 
         <p>生物</p>
@@ -404,7 +459,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64d45f381ddac507ccf7b870.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>李娴</b></h4> 
         <p>地理</p>
@@ -412,7 +467,7 @@
     </div>
 </div>
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64d458041ddac507cce8c701.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>欧阳新</b></h4> 
         <p>音乐</p> 
@@ -420,14 +475,14 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c83e1ddac507cce66d65.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>戴迎新</b></h4> 
         <p>音乐</p> 
     </div>
 </div>
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3cd3b1ddac507ccf2ec71.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>刘韧</b></h4> 
         <p>体育</p> 
@@ -435,7 +490,7 @@
     </div>
 </div>
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64d45f381ddac507ccf7b855.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>孙红</b></h4> 
         <p>信息</p> 
@@ -448,7 +503,7 @@
 <h2>3班学生</h2>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64b22e981ddac507ccb52893.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>胡晓蓉</b></h4> 
         <p>1</p> 
@@ -456,7 +511,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64b22e901ddac507ccb506b7.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>吴婉莹</b></h4> 
         <p>3</p> 
@@ -464,7 +519,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64b22ea91ddac507ccb57984.webp" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>李昕蕾</b></h4> 
         <p>5</p> 
@@ -472,7 +527,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64b22e9f1ddac507ccb547d2.webp" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>谭籽言</b></h4> 
         <p>6</p> 
@@ -480,7 +535,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3aba61ddac507ccab70a9.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>曾心悦</b></h4> 
         <p>7</p> 
@@ -488,7 +543,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3ac8e1ddac507ccad2933.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>屈思琪</b></h4> 
         <p>8</p> 
@@ -496,7 +551,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3ad051ddac507ccae081f.webp" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>侯露茜</b></h4> 
         <p>9</p> 
@@ -504,7 +559,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b17f1ddac507ccb5a331.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>余诗曼</b></h4> 
         <p>10</p> 
@@ -512,7 +567,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b1a61ddac507ccb5e1cf.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>张世敏</b></h4> 
         <p>11</p> 
@@ -520,7 +575,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b1d51ddac507ccb64e96.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>潘政</b></h4> 
         <p>12</p> 
@@ -528,7 +583,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b2e11ddac507ccb7ccfc.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>邓佳婷</b></h4> 
         <p>13</p> 
@@ -536,7 +591,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b3611ddac507ccb87dfb.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>吴锦慧</b></h4> 
         <p>14</p> 
@@ -544,7 +599,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b38b1ddac507ccb8c0ee.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>鄢缘</b></h4> 
         <p>15</p> 
@@ -552,7 +607,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b3b11ddac507ccb8ff2e.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>何可欣</b></h4> 
         <p>16</p> 
@@ -560,7 +615,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b3f41ddac507ccb96cb4.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>罗歆榆</b></h4> 
         <p>17</p> 
@@ -568,7 +623,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b4c81ddac507ccbac77b.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>罗梓棋</b></h4> 
         <p>18</p> 
@@ -576,7 +631,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b5101ddac507ccbb62cc.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>唐俪</b></h4> 
         <p>19</p> 
@@ -584,7 +639,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b5881ddac507ccbc5c74.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>张佳妮</b></h4> 
         <p>21</p> 
@@ -592,7 +647,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b6541ddac507ccbf0977.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>徐婧茹</b></h4> 
         <p>22</p> 
@@ -600,7 +655,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b6a21ddac507ccbff3e8.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>黄斯宇</b></h4> 
         <p>23</p> 
@@ -608,7 +663,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b6dd1ddac507ccc0a5bf.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>王一岚</b></h4> 
         <p>24</p> 
@@ -616,7 +671,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b8081ddac507ccc330c3.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>王俊</b></h4> 
         <p>25</p> 
@@ -624,7 +679,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b8411ddac507ccc3956b.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>何麟憬</b></h4> 
         <p>27</p> 
@@ -632,7 +687,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b8b41ddac507ccc482c2.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>汤孝亮</b></h4> 
         <p>28</p> 
@@ -640,7 +695,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b8eb1ddac507ccc4e9b2.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>曾文浩</b></h4> 
         <p>29</p> 
@@ -648,7 +703,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b9151ddac507ccc5310c.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>姚翔</b></h4> 
         <p>30</p> 
@@ -656,7 +711,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b9451ddac507ccc583e2.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>谢子豪</b></h4> 
         <p>31</p> 
@@ -664,7 +719,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b96a1ddac507ccc5c2e5.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>吴泽峰</b></h4> 
         <p>32</p> 
@@ -672,7 +727,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3b9ac1ddac507ccc62ae8.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>徐钰龙</b></h4> 
         <p>33</p> 
@@ -680,7 +735,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3bdd61ddac507cccd1130.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>谢凯程</b></h4> 
         <p>35</p> 
@@ -688,7 +743,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3bf711ddac507cccfaf1c.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>彭子涵</b></h4> 
         <p>36</p> 
@@ -696,7 +751,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3bf9f1ddac507cccffee9.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>庄必成</b></h4> 
         <p>37</p> 
@@ -704,7 +759,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c0641ddac507ccd13595.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>陈晟</b></h4> 
         <p>38</p> 
@@ -712,7 +767,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c2a91ddac507ccd54155.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>郑宇</b></h4> 
         <p>40</p> 
@@ -720,7 +775,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c3971ddac507ccd72c5a.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>曾宇凡</b></h4> 
         <p>42</p> 
@@ -728,7 +783,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c4821ddac507ccdad074.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>邓甜</b></h4> 
         <p>43</p> 
@@ -736,7 +791,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c49d1ddac507ccdb2c7c.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>钟定扬</b></h4> 
         <p>44</p> 
@@ -744,7 +799,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c4ce1ddac507ccdbd4fb.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>彭州宇</b></h4> 
         <p>45</p> 
@@ -752,7 +807,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c5b91ddac507ccde5ca4.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>姚亮</b></h4> 
         <p>47</p> 
@@ -760,7 +815,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c63c1ddac507cce06070.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>许瑾瑜</b></h4> 
         <p>48</p> 
@@ -768,7 +823,7 @@
 </div>
 
 <div class="card">
-    <img src="https://pic.imgdb.cn/item/64a3c6ce1ddac507cce25346.jpg" alt="Avatar" style="width:100%">
+
     <div class="container">
         <h4><b>刘奕煊</b></h4> 
         <p>49</p> 
