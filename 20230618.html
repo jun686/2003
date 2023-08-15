@@ -241,10 +241,19 @@
 
 	</div>
     <style>
+    .carda {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
 
-        
+        display: inline-block;
 
-        
+    }
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    .container {
+        padding: 2px 16px;
+    }
         #image-container img {
             max-width: 100%;
             max-height: 100%; /* 图片的最大高度为容器高度 */
@@ -252,8 +261,9 @@
             height: auto;
         }
     </style>
-    <div id="image-container">
+    <div id="image-container" class="carda">
         <img src="https://pic.imgdb.cn/item/64daf0981ddac507ccabf8e4.jpg" alt="图片">
+        <center><h4>毕业合影</h4> </center>
     </div>
 <!-- row -->
 	<div class="row">
