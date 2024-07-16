@@ -13,16 +13,16 @@
 
 </head>
 <body>
-<form id="form" onsubmit="return validateForm()">
+<form id="form">
     <div class="box">
         <h2>Login</h2>
         <div class="input-box">
             <label>账号</label>
-            <input type="account"/>
+            <input type="text" id="account"/> 
         </div>
         <div class="input-box">
             <label>密码</label>
-            <input type="password" id="password" name="password" placeholder="请输入密码"/>
+            <input type="password" id="password" placeholder="请输入密码"/>
         </div>
         <div class="btn-box">
             <a href="#">忘记密码?</a>
@@ -38,13 +38,13 @@
     $('#form').submit(function (e) {
       e.preventDefault();
 
-      const account = $('#account').val(); // 获取用户名
-      const shan = CryptoJS.SHA256(account).toString(); // 计算用户名哈希值
+      const account = $('#account').val();
+      const shan = CryptoJS.SHA256(account).toString();
 
-      const passwordInput = $('#password').val(); // 获取密码
-      const shap = CryptoJS.SHA256(passwordInput).toString(); // 计算密码哈希值
+      const passwordInput = $('#password').val();
+      const shap = CryptoJS.SHA256(passwordInput).toString();
 
-      $.getJSON('json.json', function (data) {
+      $.getJSON('login.json', function (data) { 
         if (shan === data.shan && shap === data.shap) {
           window.location.href = data.url;
         } else {
@@ -54,5 +54,6 @@
     });
   });
 </script>
+
 </body>
 </html>
