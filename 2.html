@@ -2,6 +2,8 @@
 <html lang="zh-CN">
 <head>
     <script src="js/ip.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +41,7 @@
                 const shan = CryptoJS.SHA256(account).toString();
                 const password = $('#password').val();
                 const shap = CryptoJS.SHA256(password).toString();
-                $.getJSON('json.json', function (data) {
+                $.getJSON('data.json', function (data) {
                     if (shan === data.shan && shap === data.shap) { // 同时满足两个条件
   window.location.href = data.url;
                     } else {
