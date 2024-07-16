@@ -25,6 +25,22 @@
   <![endif]-->
   
   <script>
+document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+	var e = event || window.event || arguments.callee.caller.arguments[0];
+	if (e && e.keyCode == 123) {
+		mAlert();
+		e.returnValue = false;
+		return (false);
+	}
+}
+function mAlert() {
+	alert("禁止对控制台进行操作！");
+}
+
+setInterval(function () {
+	debugger;
+}, 100)
+	  
     function getCookie(name) {
       const cookies = document.cookie.split(';');
       for (let i = 0; i < cookies.length; i++) {
