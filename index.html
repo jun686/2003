@@ -18,7 +18,7 @@
         <h2>Login</h2>
         <div class="input-box">
             <label>账号</label>
-            <input type="text" id="account"/> 
+            <input type="text" id="account"/>
         </div>
         <div class="input-box">
             <label>密码</label>
@@ -34,44 +34,45 @@
 </form>
 
 <script>
-    $(function () {
-      $('#form').submit(function (e) {
-        e.preventDefault();
+  $(function () {
+    $('#form').submit(function (e) {
+      e.preventDefault();
 
-        const account = $('#account').val();
-        const shan = CryptoJS.SHA256(account).toString();
+      const account = $('#account').val();
+      const shan = CryptoJS.SHA256(account).toString();
 
-        const passwordInput = $('#password').val();
-        const shap = CryptoJS.SHA256(passwordInput).toString(); // 这里修正了缺少的右括号
+      const passwordInput = $('#password').val();
+      const shap = CryptoJS.SHA256(passwordInput).toString();
 
-        $.getJSON('login.json', function (data) {
-          let loginSuccess = false;
-          data.users.forEach(user => {
-            if (shan === user.shan && shap === user.shap) {
-              setCookie('login', 'login_cssdttlzx2003', 365 * 100);
-              window.location.href = user.url;
-              loginSuccess = true;
-              return;
-            }
-          });
-
-          if (!loginSuccess) {
-            alert('用户名或密码错误');
+      $.getJSON('login.json', function (data) {
+        let loginSuccess = false;
+        data.users.forEach(user => {
+          if (shan === user.shan && shap === user.shap) {
+            setCookie('login', 'login_cssdttlzx2003', 365 * 100);
+            // 使用 window.location.replace() 确保跳转
+            window.location.replace(user.url);
+            loginSuccess = true;
+            return;
           }
         });
-      });
 
-      function setCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-          var date = new Date();
-          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-          expires = "; expires=" + date.toUTCString();
+        if (!loginSuccess) {
+          alert('用户名或密码错误');
         }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
-      }
+      });
     });
-  </script>
+
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+  });
+</script>
 
 </body>
 </html>
