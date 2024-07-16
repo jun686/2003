@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -11,7 +10,26 @@
     <title>青春之舟，乘风破浪！</title>
     <link rel="icon" href="favicon.ico"> 
     <link rel="stylesheet" href="css/style.css">
+<script>
+document.onkeydown = document.onkeyup = document.onkeypress = function (event) {
+	var e = event || window.event || arguments.callee.caller.arguments[0];
+	if (e && e.keyCode == 123) {
+		mAlert();
+		e.returnValue = false;
+		return (false);
+	}
+}
+function mAlert() {
+	alert("禁止对控制台进行操作！");
+}
 
+setInterval(function () {
+	debugger;
+}, 100)
+
+document.oncontextmenu = function () { return false; };
+
+</script>
 </head>
 <body>
 <form id="form">
