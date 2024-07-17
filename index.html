@@ -83,8 +83,7 @@ document.oncontextmenu = function () { return false; };
 
         $.getJSON('login.json', function (data) { 
           if (shan === data.shan && shap === data.shap) {
-            // 登录成功后设置 cookie
-            setCookie('login', 'login_cssdttlzx2003', 365 * 100);
+            setCookie('login', 'login_cssdttlzx2003', 7);
             window.location.href = data.url;
           } else {
             alert('用户名或密码错误');
